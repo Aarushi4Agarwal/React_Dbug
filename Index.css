@@ -1,14 +1,14 @@
-div{
-    background-color: red;
-    color: beige;
-    border: 5px solid black;
-    padding: 5px;
-    margin: 10px;
-}
-.box2{
-    background-color: blue;
-    color: white;
-    border: 5px solid black;
-    padding: 10px;
-    margin-top: 30px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+@layer base {
+    body {
+        @apply font-[Poppins]
+    }
+    li {
+        @apply p-4
+    }
 }
