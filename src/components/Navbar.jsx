@@ -5,7 +5,12 @@ import {AiOutlineClose} from 'react-icons/ai';
 import {HiOutlineMenuAlt4} from 'react-icons/hi';
 import {FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaYoutube} from 'react-icons/fa';
 
+
 const Navbar = () => {
+    const [nav, setNav] = useState(false)
+    const handleNav = () => {
+        setNav(!nav)
+    }
   return (
     <div className='flex justify-between items-center h-20 px-4'>
         <div>
@@ -22,9 +27,14 @@ const Navbar = () => {
     <BiSearch size={20}/>
     <BsPerson size={20}/>
     </div>
+    {/* Hamburger */}
+    <div onClick={handleNav} className='md:hidden'>
+        {nav ? <AiOutlineClose size={20} /> : <HiOutlineMenuAlt4 size={20} />} 
+    </div>
 <div className='md:hidden'>
     <HiOutlineMenuAlt4 size={20} />
 </div>
+
     {/* Mobile menu dropdown */}
 <div className='absolute left-[-100%] top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'>
     <ul>

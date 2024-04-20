@@ -9,7 +9,7 @@
 }
 
 .icon {
-    colour: var(--primary-dark);
+    color: var(--primary-dark);
 }
 
 @layer base {
